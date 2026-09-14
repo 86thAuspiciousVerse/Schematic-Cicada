@@ -1,0 +1,15 @@
+{
+  "name": "schematic-cicada-shell",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Schematic-Cicada product shell (Electron): launcher window (projects, management pages) supervises the launcher stack (engine + DSH host). docs/04 §2/§5.",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/config.test.mjs tests/status.test.mjs tests/stack.test.mjs tests/projects.test.mjs tests/syntax.test.mjs tests/manager-core.test.mjs tests/manager-client.test.mjs tests/manager-symbols.test.mjs tests/engine-client.test.mjs tests/launcher-ui.test.mjs tests/ui-smoke.test.mjs"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}

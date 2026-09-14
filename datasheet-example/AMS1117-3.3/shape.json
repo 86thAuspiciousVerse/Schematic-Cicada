@@ -1,0 +1,1 @@
+{"name":"AMS1117-3.3","refPrefix":"U","description":"1A low dropout fixed 3.3V linear voltage regulator, SOT-223","pins":[{"number":"1","name":"GND","electrical":"power_in","side":"bottom"},{"number":"2","name":"VOUT","electrical":"power_out","side":"right"},{"number":"3","name":"VIN","electrical":"power_in","side":"left"}]}

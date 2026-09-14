@@ -1,0 +1,38 @@
+# 独立仓库：docs/ + cicada-editor/（源码） + datasheet-example + 其他资产
+# 各自目录自行管理的子树（排除，避免嵌套）；根锚定以免误伤 src/vendor/kicad
+cicada-harness/
+/kicad/
+
+# 依赖与构建产物（可重建/再下载；wx 构建步骤见 cicada-editor/README.md）
+node_modules/
+.pnpm-store/
+.dsh-home-dev/
+cicada-editor/build/
+cicada-editor/build-*/
+cicada-editor/third_party/
+cicada-editor/.kicad-cli-config/
+cicada-editor.kicad-cli-config/
+
+# 凭据（绝不入库）
+API-Key.txt
+tavily-mcp.txt
+*.credentials.yaml
+MinerU/
+
+# 其他独立 clone（排除）
+deepseek-harness/
+cicada-editor/logs/
+cicada-shell/logs/
+cicada-smoke-home/
+cicada-dev-home/
+cicada-diag-home/
+
+# 官方符号库数据源（GitLab 稀疏 clone；选择性重新 clone 更新）
+assets/kicad-symbols-src/
+
+# 开发文档与对照资料（2026-09-13 发布版排除）
+docs/
+docs(outofdate)/
+schematic-cicada-dsh-context/
+AGENTS.md
+deepseek-harness/

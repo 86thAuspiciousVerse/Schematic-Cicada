@@ -1,0 +1,12 @@
+/* Deliberately minimal generated-header substitute for the compile-only K1b
+ * probe.  A production KiCad-backed target must consume KiCad's configured
+ * config.h instead of this file. */
+#ifndef CICADA_KICAD_PROBE_CONFIG_H
+#define CICADA_KICAD_PROBE_CONFIG_H
+#define HAVE_MATH_H 1
+#define HAVE_CXX_CMATH 1
+#define HAVE_CMATH_ASINH 1
+#define HAVE_CMATH_ACOSH 1
+#define HAVE_CMATH_ATANH 1
+#define HAVE_CMATH_ISINF 1
+#endif

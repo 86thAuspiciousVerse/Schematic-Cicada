@@ -1,0 +1,191 @@
+bool __cdecl KIGFX::operator!=(class KIGFX::COLOR4D const &,class KIGFX::COLOR4D const &)
+bool __cdecl KIGFX::operator==(class KIGFX::COLOR4D const &,class KIGFX::COLOR4D const &)
+class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl FormatDouble2Str(double)
+class wxString __cdecl EscapeString(class wxString const &,enum ESCAPE_CONTEXT)
+class wxString __cdecl From_UTF8(char const *)
+class wxString __cdecl GetDefaultFieldName(enum FIELD_T,bool)
+class wxString __cdecl GetMajorMinorVersion(void)
+class wxString __cdecl KIUI::EllipsizeMenuText(class wxString const &)
+class wxString __cdecl UnescapeString(class wxString const &)
+int __cdecl StrNumCmp(class wxString const &,class wxString const &,bool)
+private: __cdecl APP_MONITOR::SENTRY::SENTRY(void)
+private: static class APP_MONITOR::SENTRY * APP_MONITOR::SENTRY::m_instance
+protected: virtual int __cdecl SCH_FIELD::compare(class SCH_ITEM const &,int)const 
+protected: virtual int __cdecl SCH_SHAPE::compare(class SCH_ITEM const &,int)const 
+protected: virtual void __cdecl SCH_SHAPE::swapData(class SCH_ITEM *)
+protected: void __cdecl wxPGChoices::Free(void)
+protected: void __cdecl wxPGChoices::Init(void)
+public: __cdecl EXPRESSION_EVALUATOR::EXPRESSION_EVALUATOR(bool)
+public: __cdecl EXPRESSION_EVALUATOR::EXPRESSION_EVALUATOR(class EXPRESSION_EVALUATOR const &)
+public: __cdecl EXPRESSION_EVALUATOR::~EXPRESSION_EVALUATOR(void)
+public: __cdecl KIGFX::COLOR4D::COLOR4D(class wxString const &)
+public: __cdecl NESTED_SETTINGS::NESTED_SETTINGS(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int,class JSON_SETTINGS *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,bool)
+public: __cdecl SCH_SHAPE::SCH_SHAPE(enum SHAPE_T,enum SCH_LAYER_ID,int,enum FILL_T,enum KICAD_T)
+public: __cdecl TEXT_ATTRIBUTES::~TEXT_ATTRIBUTES(void)
+public: bool __cdecl SCH_FIELD::IsMandatory(void)const 
+public: bool __cdecl SCH_FIELD::operator==(class SCH_FIELD const &)const 
+public: class EMBEDDED_FILES & __cdecl EMBEDDED_FILES::operator=(class EMBEDDED_FILES const &)
+public: class EXPRESSION_EVALUATOR & __cdecl EXPRESSION_EVALUATOR::operator=(class EXPRESSION_EVALUATOR const &)
+public: class KIGFX::COLOR4D & __cdecl KIGFX::COLOR4D::Desaturate(void)
+public: class std::vector<class wxString,class std::allocator<class wxString> > const * __cdecl EMBEDDED_FILES::UpdateFontFiles(void)
+public: class wxPGChoiceEntry & __cdecl wxPGChoices::Add(class wxString const &,int)
+public: class wxString __cdecl EMBEDDED_FILES::EMBEDDED_FILE::GetLink(void)const 
+public: class wxString __cdecl EXPRESSION_EVALUATOR::Evaluate(class wxString const &)
+public: class wxString __cdecl SCH_FIELD::GetCanonicalName(void)const 
+public: class wxString __cdecl SCH_FIELD::GetName(bool)const 
+public: class wxString __cdecl SCH_FIELD::GetText(class SCH_SHEET_PATH const *,class wxString const &)const 
+public: int __cdecl wxPGChoices::Index(int)const 
+public: static class KIGFX::COLOR4D const KIGFX::COLOR4D::BLACK
+public: static class KIGFX::COLOR4D const KIGFX::COLOR4D::UNSPECIFIED
+public: static class KIGFX::COLOR4D const KIGFX::COLOR4D::WHITE
+public: virtual __cdecl CALLBACK_GAL::~CALLBACK_GAL(void)
+public: virtual __cdecl KIGFX::GAL_DISPLAY_OPTIONS::~GAL_DISPLAY_OPTIONS(void)
+public: virtual __cdecl KIGFX::VIEW_ITEM::~VIEW_ITEM(void)
+public: virtual __cdecl NESTED_SETTINGS::~NESTED_SETTINGS(void)
+public: virtual __int64 __cdecl ORIGIN_TRANSFORMS::FromDisplay(__int64,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual __int64 __cdecl ORIGIN_TRANSFORMS::ToDisplay(__int64,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual bool __cdecl APP_SETTINGS_BASE::MigrateFromLegacy(class wxConfigBase *)
+public: virtual bool __cdecl DPI_SCALING_COMMON::GetCanvasIsAutoScaled(void)const 
+public: virtual bool __cdecl EDA_SHAPE::Deserialize(class google::protobuf::Any const &)
+public: virtual bool __cdecl EDA_TEXT::Deserialize(class google::protobuf::Any const &)
+public: virtual bool __cdecl IO_BASE::CanReadLibrary(class wxString const &)const 
+public: virtual bool __cdecl IO_BASE::DeleteLibrary(class wxString const &,class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class UTF8,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class UTF8> > > const *)
+public: virtual bool __cdecl IO_BASE::IsLibraryWritable(class wxString const &)
+public: virtual bool __cdecl KIFONT::GLYPH::IsStroke(void)const 
+public: virtual bool __cdecl KIFONT::OUTLINE_GLYPH::IsOutline(void)const 
+public: virtual bool __cdecl NESTED_SETTINGS::LoadFromFile(class wxString const &)
+public: virtual bool __cdecl NESTED_SETTINGS::SaveToFile(class wxString const &,bool)
+public: virtual bool __cdecl NETCLASS::Deserialize(class google::protobuf::Any const &)
+public: virtual bool __cdecl PROGRESS_REPORTER_BASE::KeepRefreshing(bool)
+public: virtual bool __cdecl SCH_FIELD::HasHypertext(void)const 
+public: virtual bool __cdecl SCH_FIELD::HitTest(class BOX2<class VECTOR2<int> > const &,bool,int)const 
+public: virtual bool __cdecl SCH_FIELD::HitTest(class SHAPE_LINE_CHAIN const &,bool)const 
+public: virtual bool __cdecl SCH_FIELD::HitTest(class VECTOR2<int> const &,int)const 
+public: virtual bool __cdecl SCH_FIELD::IsReplaceable(void)const 
+public: virtual bool __cdecl SCH_FIELD::Replace(struct EDA_SEARCH_DATA const &,void *)
+public: virtual bool __cdecl SCH_FIELD::operator<(class SCH_ITEM const &)const 
+public: virtual bool __cdecl SCH_FIELD::operator==(class SCH_ITEM const &)const 
+public: virtual bool __cdecl SCH_LINE::Deserialize(class google::protobuf::Any const &)
+public: virtual bool __cdecl SCH_SHAPE::HitTest(class BOX2<class VECTOR2<int> > const &,bool,int)const 
+public: virtual bool __cdecl SCH_SHAPE::HitTest(class SHAPE_LINE_CHAIN const &,bool)const 
+public: virtual bool __cdecl SCH_SHAPE::HitTest(class VECTOR2<int> const &,int)const 
+public: virtual bool __cdecl SCH_SHAPE::IsEndPoint(class VECTOR2<int> const &)const 
+public: virtual bool __cdecl SCH_SHAPE::operator==(class SCH_ITEM const &)const 
+public: virtual bool __cdecl SERIALIZABLE::Deserialize(class google::protobuf::Any const &)
+public: virtual class BOX2<class VECTOR2<double> > __cdecl KIFONT::OUTLINE_GLYPH::BoundingBox(void)
+public: virtual class BOX2<class VECTOR2<int> > const __cdecl SCH_SHAPE::GetBoundingBox(void)const 
+public: virtual class EDA_ANGLE __cdecl ORIGIN_TRANSFORMS::FromDisplay(class EDA_ANGLE const &,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual class EDA_ITEM * __cdecl SCH_SHAPE::Clone(void)const 
+public: virtual class VECTOR2<int> __cdecl SCH_FIELD::GetPosition(void)const 
+public: virtual class std::set<class KIFONT::OUTLINE_FONT *,struct std::less<class KIFONT::OUTLINE_FONT *>,class std::allocator<class KIFONT::OUTLINE_FONT *> > __cdecl LIB_SYMBOL::GetFonts(void)const 
+public: virtual class std::set<class KIFONT::OUTLINE_FONT *,struct std::less<class KIFONT::OUTLINE_FONT *>,class std::allocator<class KIFONT::OUTLINE_FONT *> > __cdecl SCHEMATIC::GetFonts(void)const 
+public: virtual class std::vector<int,class std::allocator<int> > __cdecl SCH_SHAPE::ViewGetLayers(void)const 
+public: virtual class std::vector<int,class std::allocator<int> > __cdecl SYMBOL::ViewGetLayers(void)const 
+public: virtual class wxString __cdecl SCH_FIELD::GetItemDescription(class UNITS_PROVIDER *,bool)const 
+public: virtual class wxString __cdecl SCH_SHAPE::GetItemDescription(class UNITS_PROVIDER *,bool)const 
+public: virtual class wxString __cdecl SCH_SHEET::GetItemDescription(class UNITS_PROVIDER *,bool)const 
+public: virtual double __cdecl DPI_SCALING_COMMON::GetContentScaleFactor(void)const 
+public: virtual double __cdecl DPI_SCALING_COMMON::GetScaleFactor(void)const 
+public: virtual double __cdecl KIGFX::VIEW_ITEM::ViewGetLOD(int,class KIGFX::VIEW const *)const 
+public: virtual double __cdecl ORIGIN_TRANSFORMS::FromDisplay(double,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual double __cdecl ORIGIN_TRANSFORMS::ToDisplay(class EDA_ANGLE const &,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual double __cdecl ORIGIN_TRANSFORMS::ToDisplay(double,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual double __cdecl SCH_FIELD::Similarity(class SCH_ITEM const &)const 
+public: virtual double __cdecl SCH_SHAPE::Similarity(class SCH_ITEM const &)const 
+public: virtual enum BITMAPS __cdecl SCH_FIELD::GetMenuImage(void)const 
+public: virtual enum BITMAPS __cdecl SCH_SHAPE::GetMenuImage(void)const 
+public: virtual int __cdecl ORIGIN_TRANSFORMS::FromDisplay(int,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual int __cdecl ORIGIN_TRANSFORMS::ToDisplay(int,enum ORIGIN_TRANSFORMS::COORD_TYPES_T)const 
+public: virtual int __cdecl SCH_SHAPE::GetEffectiveWidth(void)const 
+public: virtual void __cdecl DPI_SCALING_COMMON::SetDpiConfig(bool,double)
+public: virtual void __cdecl EDA_SHAPE::Serialize(class google::protobuf::Any &)const 
+public: virtual void __cdecl EDA_TEXT::Serialize(class google::protobuf::Any &)const 
+public: virtual void __cdecl IO_BASE::AdvanceProgressPhase(void)
+public: virtual void __cdecl IO_BASE::CreateLibrary(class wxString const &,class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class UTF8,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class UTF8> > > const *)
+public: virtual void __cdecl IO_BASE::GetLibraryOptions(class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class UTF8,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class UTF8> > > *)const 
+public: virtual void __cdecl IO_BASE::Report(class wxString const &,enum SEVERITY)
+public: virtual void __cdecl KIFONT::OUTLINE_GLYPH::CacheTriangulation(bool,bool)
+public: virtual void __cdecl KIGFX::VIEW_ITEM::ViewDraw(int,class KIGFX::VIEW *)const 
+public: virtual void __cdecl LIB_SYMBOL::AutoplaceFields(class SCH_SCREEN *,enum AUTOPLACE_ALGO)
+public: virtual void __cdecl LIB_SYMBOL::EmbedFonts(void)
+public: virtual void __cdecl NETCLASS::Serialize(class google::protobuf::Any &)const 
+public: virtual void __cdecl PARAM_CFG_BOOL::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_BOOL::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_DOUBLE::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_DOUBLE::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_FILENAME::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_FILENAME::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_INT::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_INT::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_INT_WITH_SCALE::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_INT_WITH_SCALE::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_LIBNAME_LIST::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_LIBNAME_LIST::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_WXSTRING::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_WXSTRING::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_WXSTRING_SET::ReadParam(class wxConfigBase *)const 
+public: virtual void __cdecl PARAM_CFG_WXSTRING_SET::SaveParam(class wxConfigBase *)const 
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::AddPhases(int)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::AdvancePhase(class wxString const &)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::AdvancePhase(void)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::AdvanceProgress(void)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::BeginPhase(int)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::Report(class wxString const &)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::SetCurrentProgress(double)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::SetMaxProgress(int)
+public: virtual void __cdecl PROGRESS_REPORTER_BASE::SetNumPhases(int)
+public: virtual void __cdecl SCHEMATIC::EmbedFonts(void)
+public: virtual void __cdecl SCH_FIELD::BeginEdit(class VECTOR2<int> const &)
+public: virtual void __cdecl SCH_FIELD::CalcEdit(class VECTOR2<int> const &)
+public: virtual void __cdecl SCH_FIELD::DoHypertextAction(class EDA_DRAW_FRAME *,class VECTOR2<int> const &)const 
+public: virtual void __cdecl SCH_FIELD::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_FIELD::MirrorHorizontally(int)
+public: virtual void __cdecl SCH_FIELD::MirrorVertically(int)
+public: virtual void __cdecl SCH_FIELD::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_FIELD::Rotate(class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_FIELD::SetPosition(class VECTOR2<int> const &)
+public: virtual void __cdecl SCH_FIELD::SetText(class wxString const &)
+public: virtual void __cdecl SCH_JUNCTION::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_LABEL_BASE::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_LINE::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_LINE::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_LINE::Serialize(class google::protobuf::Any &)const 
+public: virtual void __cdecl SCH_PIN::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_PIN::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_SHAPE::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_SHAPE::MirrorHorizontally(int)
+public: virtual void __cdecl SCH_SHAPE::MirrorVertically(int)
+public: virtual void __cdecl SCH_SHAPE::Move(class VECTOR2<int> const &)
+public: virtual void __cdecl SCH_SHAPE::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_SHAPE::Rotate(class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_SHAPE::SetFilled(bool)
+public: virtual void __cdecl SCH_SHAPE::SetStroke(class STROKE_PARAMS const &)
+public: virtual void __cdecl SCH_SHEET::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_SYMBOL::AutoplaceFields(class SCH_SCREEN *,enum AUTOPLACE_ALGO)
+public: virtual void __cdecl SCH_SYMBOL::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_TEXT::DoHypertextAction(class EDA_DRAW_FRAME *,class VECTOR2<int> const &)const 
+public: virtual void __cdecl SCH_TEXT::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_TEXT::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SERIALIZABLE::Serialize(class google::protobuf::Any &)const 
+public: void __cdecl KISTATUSBAR::AddWarningMessages(class wxString const &,class std::vector<struct LOAD_MESSAGE,class std::allocator<struct LOAD_MESSAGE> > const &)
+public: void __cdecl REMOTE_PROVIDER_SETTINGS::ResetToDefaults(void)
+public: void __cdecl SCH_FIELD::SetName(class wxString const &)
+public: void __cdecl wxPGChoices::AssignData(class wxPGChoicesData *)
+public: void __cdecl wxPGChoices::Clear(void)
+void __cdecl CollectOtherUnits(class wxString const &,int,class LIB_ID const &,class SCH_SHEET_PATH &,class std::vector<class SCH_SYMBOL *,class std::allocator<class SCH_SYMBOL *> > *)
+void __cdecl KIGFX::from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,class KIGFX::COLOR4D &)
+void __cdecl KIGFX::to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,class KIGFX::COLOR4D const &)
+void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,class wxString &)
+void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,struct BOM_FMT_PRESET &)
+void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,struct BOM_PRESET &)
+void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,class wxString const &)
+void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,struct BOM_FMT_PRESET const &)
+void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,struct BOM_PRESET const &)
+void __cdecl wxStringSplit(class wxString const &,class wxArrayString &,wchar_t)
+wxmsw32u_core.lib(listctrl.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_Draw [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(listctrl.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_GetIconSize [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(listctrl.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_GetImageCount [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(ownerdrw.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_Add [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(ownerdrw.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_Create [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(ownerdrw.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_Destroy [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]
+wxmsw32u_core.lib(ownerdrw.obj) : error LNK2001: 无法解析的外部符号 __imp_ImageList_Draw [C:\dsh\Schematic-Cicada\cicada-editor\build-msvc-kicad\kicad-model-slice1-test.vcxproj]

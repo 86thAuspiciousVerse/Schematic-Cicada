@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'" />
+<title>Schematic-Cicada</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; padding: 18px 20px; background: #16181d; color: #e6e8ee;
+    font: 13px/1.6 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  h1 { margin: 0 0 2px; font-size: 15px; font-weight: 600; letter-spacing: .02em; }
+  .sub { color: #8c93a3; font-size: 12px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px;
+    border: 1px solid #3a4050; color: #a8b0c2; margin-left: 8px; vertical-align: 2px;
+  }
+  .badge[data-phase="ready"] { border-color: #2f6b46; color: #7fd8a4; }
+  .badge[data-phase="failed"] { border-color: #7a3a3a; color: #f09a9a; }
+  .badge[data-phase="starting"] { border-color: #4a5a86; color: #a9bdf0; }
+  .badge[data-phase="blocked"] { border-color: #7a6a2f; color: #e8d38a; }
+  #message { margin: 0 0 12px; }
+  .facts { color: #98a0b2; font-size: 12px; margin-bottom: 12px; }
+  .facts b { color: #cfd5e2; font-weight: 600; }
+  pre {
+    margin: 0 0 14px; padding: 10px 12px; height: 150px; overflow: auto;
+    background: #101216; border: 1px solid #262a33; border-radius: 6px;
+    font: 11.5px/1.5 "Cascadia Mono", Consolas, monospace; color: #9aa3b5;
+    white-space: pre-wrap; word-break: break-all;
+  }
+  .row { display: flex; gap: 8px; }
+  button {
+    flex: 1; padding: 7px 10px; border-radius: 6px; cursor: pointer;
+    border: 1px solid #3a4050; background: #22262e; color: #dfe3ec; font-size: 12.5px;
+  }
+  button:hover { background: #2a2f39; }
+  button.primary { border-color: #3f6ea8; background: #24405f; color: #dce9f8; }
+  button.primary:hover { background: #2b4d72; }
+</style>
+</head>
+<body>
+  <h1>Schematic-Cicada<span class="badge" id="phase">启动中</span></h1>
+  <div class="sub">本地原理图 + AI 协作（引擎与 DSH 主机由本壳监督）</div>
+  <p id="message">正在启动…</p>
+  <div class="facts">
+    引擎端口：<b id="port">—</b>　产品窗口：<b id="window">未打开</b>
+  </div>
+  <pre id="log">（暂无日志）</pre>
+  <div class="row">
+    <button class="primary" id="open">打开产品窗口</button>
+    <button id="logs">打开日志目录</button>
+    <button id="quit">退出</button>
+  </div>
+<script>
+  const PHASES = { starting: '启动中', ready: '已就绪', failed: '启动失败', blocked: '已有实例', exited: '已退出' }
+  const $ = (id) => document.getElementById(id)
+  $('open').addEventListener('click', () => window.cicada.open())
+  $('logs').addEventListener('click', () => window.cicada.logs())
+  $('quit').addEventListener('click', () => window.cicada.quit())
+  window.cicada.onState((state) => {
+    $('phase').textContent = PHASES[state.phase] ?? state.phase
+    $('phase').dataset.phase = state.phase
+    $('message').textContent = state.message
+    $('port').textContent = state.enginePort === null ? '—' : String(state.enginePort)
+    $('window').textContent = state.hasWindow ? '已打开' : '未打开'
+    $('open').disabled = !state.hasWindow
+    const lines = [...state.problems, ...(state.logTail.length > 0 ? ['—— logs/launch.txt ——', ...state.logTail] : [])]
+    $('log').textContent = lines.length > 0 ? lines.join('\n') : '（暂无日志）'
+  })
+</script>
+</body>
+</html>

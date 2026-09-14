@@ -1,0 +1,84 @@
+"class std::basic_string<char
+"class std::tuple<int
+"class wxString __cdecl AddFileExtListToFilter(class std::vector<class std::basic_string<char
+"class wxString __cdecl GetMajorMinorVersion(void)" (?GetMajorMinorVersion@@YA?AVwxString@@XZ)
+"class wxString __cdecl SeverityToString(enum SEVERITY const &)" (?SeverityToString@@YA?AVwxString@@AEBW4SEVERITY@@@Z)
+"enum SEVERITY __cdecl SeverityFromString(class wxString const &)" (?SeverityFromString@@YA?AW4SEVERITY@@AEBVwxString@@@Z)
+"int __cdecl ClampTextPenSize(int
+"int __cdecl GetPenSizeForBold(int)" (?GetPenSizeForBold@@YAHH@Z)
+"int __cdecl GetPenSizeForNormal(int)" (?GetPenSizeForNormal@@YAHH@Z)
+"private: __cdecl APP_MONITOR::SENTRY::SENTRY(void)" (??0SENTRY@APP_MONITOR@@AEAA@XZ)
+"private: static class APP_MONITOR::SENTRY * APP_MONITOR::SENTRY::m_instance" (?m_instance@SENTRY@APP_MONITOR@@0PEAV12@EA)
+"private: static class LEAK_AT_EXIT<class std::map<class wxString
+"private: static class std::array<struct KIFACE *
+"private: static class std::shared_mutex DESIGN_BLOCK_LIBRARY_ADAPTER::GlobalLibraryMutex" (?GlobalLibraryMutex@DESIGN_BLOCK_LIBRARY_ADAPTER@@0Vshared_mutex@std@@A)
+"protected: double __cdecl KIGFX::GAL::computeMinGridSpacing(void)const " (?computeMinGridSpacing@GAL@KIGFX@@IEBANXZ)
+"protected: virtual bool __cdecl KIGFX::GAL::updatedGalDisplayOptions(class KIGFX::GAL_DISPLAY_OPTIONS const &)" (?updatedGalDisplayOptions@GAL@KIGFX@@MEAA_NAEBVGAL_DISPLAY_OPTIONS@2@@Z)
+"protected: virtual void __cdecl KIGFX::GAL::OnGalDisplayOptionsChanged(class KIGFX::GAL_DISPLAY_OPTIONS const &)" (?OnGalDisplayOptionsChanged@GAL@KIGFX@@MEAAXAEBVGAL_DISPLAY_OPTIONS@2@@Z)
+"public: __cdecl KIGFX::GAL::GAL(class KIGFX::GAL_DISPLAY_OPTIONS &)" (??0GAL@KIGFX@@QEAA@AEAVGAL_DISPLAY_OPTIONS@1@@Z)
+"public: __cdecl KIGFX::VIEW_GROUP::VIEW_GROUP(class KIGFX::VIEW *)" (??0VIEW_GROUP@KIGFX@@QEAA@PEAVVIEW@1@@Z)
+"public: __cdecl LIBRARY_MANAGER::~LIBRARY_MANAGER(void)" (??1LIBRARY_MANAGER@@QEAA@XZ)
+"public: __cdecl MARKER_BASE::MARKER_BASE(int
+"public: __cdecl PROJECT::PROJECT(void)" (??0PROJECT@@QEAA@XZ)
+"public: __cdecl SCH_COMMIT::SCH_COMMIT(class TOOL_MANAGER *)" (??0SCH_COMMIT@@QEAA@PEAVTOOL_MANAGER@@@Z)
+"public: __cdecl SETTINGS_MANAGER::~SETTINGS_MANAGER(void)" (??1SETTINGS_MANAGER@@QEAA@XZ)
+"public: bool __cdecl MARKER_BASE::HitTestMarker(class VECTOR2<int> const &
+"public: bool __cdecl SETTINGS_MANAGER::LoadProject(class wxString const &
+"public: class BOX2<class VECTOR2<int> > __cdecl MARKER_BASE::GetBoundingBoxMarker(void)const " (?GetBoundingBoxMarker@MARKER_BASE@@QEBA?AV?$BOX2@V?$VECTOR2@H@@@@XZ)
+"public: class COLOR_SETTINGS * __cdecl SETTINGS_MANAGER::GetColorSettings(class wxString const &)" (?GetColorSettings@SETTINGS_MANAGER@@QEAAPEAVCOLOR_SETTINGS@@AEBVwxString@@@Z)
+"public: class VECTOR2<int> __cdecl KIFONT::FONT::StringBoundaryLimits(class wxString const &
+"public: class wxString __cdecl SCHEMATIC::GetOperatingPoint(class wxString const &
+"public: class wxString __cdecl SETTINGS_MANAGER::GetPathForSettingsFile(class JSON_SETTINGS *)" (?GetPathForSettingsFile@SETTINGS_MANAGER@@QEAA?AVwxString@@PEAVJSON_SETTINGS@@@Z)
+"public: static bool __cdecl NUMERIC_EVALUATOR::IsOldSchoolDecimalSeparator(class wxUniChar
+"public: static class KIFONT::FONT * __cdecl KIFONT::FONT::GetFont(class wxString const &
+"public: static class KIFONT::METRICS const & __cdecl KIFONT::METRICS::Default(void)" (?Default@METRICS@KIFONT@@SAAEBV12@XZ)
+"public: static void __cdecl KIGFX::VIEW::OnDestroy(class KIGFX::VIEW_ITEM *)" (?OnDestroy@VIEW@KIGFX@@SAXPEAVVIEW_ITEM@2@@Z)
+"public: virtual __cdecl KIGFX::GAL::~GAL(void)" (??1GAL@KIGFX@@UEAA@XZ)
+"public: virtual __cdecl KIGFX::PAINTER::~PAINTER(void)" (??1PAINTER@KIGFX@@UEAA@XZ)
+"public: virtual __cdecl LIBRARY_MANAGER_ADAPTER::~LIBRARY_MANAGER_ADAPTER(void)" (??1LIBRARY_MANAGER_ADAPTER@@UEAA@XZ)
+"public: virtual __cdecl PROJECT::~PROJECT(void)" (??1PROJECT@@UEAA@XZ)
+"public: virtual __cdecl SCH_COMMIT::~SCH_COMMIT(void)" (??1SCH_COMMIT@@UEAA@XZ)
+"public: virtual bool __cdecl APP_SETTINGS_BASE::MigrateFromLegacy(class wxConfigBase *)" (?MigrateFromLegacy@APP_SETTINGS_BASE@@UEAA_NPEAVwxConfigBase@@@Z)
+"public: virtual bool __cdecl KIGFX::GAL::SetNativeCursorStyle(enum KICURSOR
+"public: virtual class REPORTER & __cdecl STATUSBAR_WARNING_REPORTER::Report(class wxString const &
+"public: virtual class VECTOR2<int> __cdecl KIFONT::STROKE_FONT::GetTextAsGlyphs(class BOX2<class VECTOR2<int> > *
+"public: virtual class std::set<class KIFONT::OUTLINE_FONT *
+"public: virtual class wxString __cdecl SCH_SHEET::GetItemDescription(class UNITS_PROVIDER *
+"public: virtual double __cdecl KIFONT::STROKE_FONT::GetInterline(double
+"public: virtual void __cdecl CALLBACK_GAL::DrawGlyph(class KIFONT::GLYPH const &
+"public: virtual void __cdecl KIGFX::GAL::BitmapText(class wxString const &
+"public: virtual void __cdecl KIGFX::GAL::ComputeWorldScreenMatrix(void)" (?ComputeWorldScreenMatrix@GAL@KIGFX@@UEAAXXZ)
+"public: virtual void __cdecl LIB_SYMBOL::EmbedFonts(void)" (?EmbedFonts@LIB_SYMBOL@@UEAAXXZ)
+"public: virtual void __cdecl LIB_SYMBOL::Plot(class PLOTTER *
+"public: virtual void __cdecl SCHEMATIC::EmbedFonts(void)" (?EmbedFonts@SCHEMATIC@@UEAAXXZ)
+"public: virtual void __cdecl SCH_COMMIT::Push(class wxString const &
+"public: virtual void __cdecl SCH_FIELD::DoHypertextAction(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_FIELD::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_FIELD::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_JUNCTION::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_JUNCTION::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_LABEL_BASE::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_LABEL_BASE::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_LINE::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_LINE::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_MARKER::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_PIN::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_PIN::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_RULE_AREA::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_RULE_AREA::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_SHAPE::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_SHAPE::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_SHEET::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_SHEET::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_SYMBOL::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_SYMBOL::Plot(class PLOTTER *
+"public: virtual void __cdecl SCH_TEXT::DoHypertextAction(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_TEXT::GetMsgPanelInfo(class EDA_DRAW_FRAME *
+"public: virtual void __cdecl SCH_TEXT::Plot(class PLOTTER *
+"public: void __cdecl KIFONT::FONT::Draw(class KIGFX::GAL *
+"public: void __cdecl NOTIFICATIONS_MANAGER::Load(void)" (?Load@NOTIFICATIONS_MANAGER@@QEAAXXZ)
+"public: void __cdecl TEMPLATES::AddTemplateFieldNames(class wxString const &)" (?AddTemplateFieldNames@TEMPLATES@@QEAAXAEBVwxString@@@Z)
+"void __cdecl DisplayInfoMessage(class wxWindow *
+"void __cdecl fmt::v12::detail::vformat_to(class fmt::v12::detail::buffer<char> &
+"void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map
+"void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map

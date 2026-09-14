@@ -1,0 +1,394 @@
+{
+  "generatedAt": "2026-09-07T14:16:15.960Z",
+  "source": "https://gitlab.com/kicad/libraries/kicad-symbols (master, kicad_symbol_lib v20251024)",
+  "total": 60,
+  "missing": [],
+  "catalog": {
+    "R": [
+      {
+        "name": "R",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Small",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Shunt",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Potentiometer",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Trim",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Network04",
+        "pins": 6,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Network09",
+        "pins": 11,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "R_Pack04",
+        "pins": 9,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "C": [
+      {
+        "name": "C",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "C_Polarized",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "C_Trim",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "C_Feedthrough",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "C_Small",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "L": [
+      {
+        "name": "L",
+        "pins": 4,
+        "arcs": 4,
+        "multiUnit": false
+      },
+      {
+        "name": "L_Iron",
+        "pins": 4,
+        "arcs": 4,
+        "multiUnit": false
+      },
+      {
+        "name": "L_Coupled",
+        "pins": 5,
+        "arcs": 10,
+        "multiUnit": false
+      }
+    ],
+    "D": [
+      {
+        "name": "D",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "D_Schottky",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "D_TVS",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "D_Zener",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "D_Bridge_+-AA",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "LED": [
+      {
+        "name": "LED",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "LED_Filled",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "LED_ABGR",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "Q": [
+      {
+        "name": "Q_NPN_BEC",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Q_PNP_BEC",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Q_NPN_BCE",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "QFET": [
+      {
+        "name": "Q_NMOS_GSD",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Q_PMOS_GSD",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Q_NMOS_GDS",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "SW": [
+      {
+        "name": "SW_Push",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "SW_SPST",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "SW_DPST",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "SW_DIP_x01",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "SW_SPDT",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "CRYSTAL": [
+      {
+        "name": "Crystal",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Crystal_GND24",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Crystal_GND2",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "MISC": [
+      {
+        "name": "Fuse",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Fuse_Small",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Battery",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "POWER": [
+      {
+        "name": "+3V3",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "+5V",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "+12V",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "+9V",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "GND",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "VCC",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "GNDA",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "VDD",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "+5VA",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "+24V",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "CONN": [
+      {
+        "name": "Conn_01x02",
+        "pins": 3,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_01x03",
+        "pins": 4,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_01x04",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_01x05",
+        "pins": 6,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_01x06",
+        "pins": 7,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_01x08",
+        "pins": 9,
+        "arcs": 0,
+        "multiUnit": false
+      },
+      {
+        "name": "Conn_02x02_Odd_Even",
+        "pins": 5,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ],
+    "CONN_LEGACY": [
+      {
+        "name": "Barrel_Jack",
+        "pins": 3,
+        "arcs": 2,
+        "multiUnit": false
+      },
+      {
+        "name": "RJ45",
+        "pins": 0,
+        "arcs": 0,
+        "multiUnit": false
+      }
+    ]
+  }
+}

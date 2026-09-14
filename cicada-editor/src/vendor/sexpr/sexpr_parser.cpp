@@ -1,0 +1,177 @@
+/*
+ * Copyright (C) 2016 Mark Roszko <mark.roszko@gmail.com>
+ * Copyright The KiCad Developers, see AUTHORS.txt for contributors.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#include "sexpr/sexpr_parser.h"
+#include "sexpr/sexpr_exception.h"
+#include <cctype>
+#include <cstdlib>
+#include <iterator>
+#include <stdexcept>
+
+#include <fstream>
+#include <streambuf>
+
+namespace SEXPR
+{
+    const std::string PARSER::whitespaceCharacters = " \t\n\r\b\f\v";
+
+    PARSER::PARSER() : m_lineNumber( 1 )
+    {
+    }
+
+    PARSER::~PARSER()
+    {
+    }
+
+    std::unique_ptr<SEXPR> PARSER::Parse( const std::string& aString )
+    {
+        m_lineNumber = 1;
+        std::string::const_iterator it = aString.begin();
+        std::unique_ptr<SEXPR> result = parseString( aString, it );
+        if( !result )
+            throw PARSE_EXCEPTION( "empty or malformed expression" );
+        return result;
+    }
+
+    std::unique_ptr<SEXPR> PARSER::parseString( const std::string& aString,
+                                                std::string::const_iterator& it )
+    {
+        for( ; it != aString.end(); ++it )
+        {
+            if( *it == '\n' )
+                m_lineNumber++;
+
+            if( whitespaceCharacters.find(*it) != std::string::npos )
+                continue;
+
+            if( *it == '(' )
+            {
+                std::advance( it, 1 );
+
+                auto list = std::make_unique<SEXPR_LIST>( m_lineNumber );
+
+                while( it != aString.end() && *it != ')' )
+                {
+                    //there may be newlines in between atoms of a list, so detect these here
+                    if( *it == '\n' )
+                        m_lineNumber++;
+
+                    if( whitespaceCharacters.find( *it ) != std::string::npos )
+                    {
+                        std::advance( it, 1 );
+                        continue;
+                    }
+
+                    std::unique_ptr<SEXPR> item = parseString( aString, it );
+                    list->AddChild( item.release() );
+                }
+
+                if( it != aString.end() )
+                    std::advance( it, 1 );
+
+                return list;
+            }
+            else if( *it == ')' )
+            {
+                return nullptr;
+            }
+            else if( *it == '"' )
+            {
+                ++it;
+
+                auto starting_it = it;
+
+                for( ; it != aString.end(); ++it )
+                {
+                    auto ch = *it;
+
+                    if( ch == '\\' )
+                    {
+                        // Skip the next escaped character
+                        if( ++it == aString.end() )
+                            break;
+
+                        continue;
+                    }
+
+                    if( ch == '"' )
+                        break;
+                }
+
+                if( it == aString.end() )
+                    throw PARSE_EXCEPTION("missing closing quote");
+
+                auto str = std::make_unique<SEXPR_STRING>( std::string( starting_it, it ),
+                        m_lineNumber );
+
+                ++it;
+                return str;
+
+            }
+            else
+            {
+                size_t startPos = std::distance( aString.begin(), it );
+                size_t closingPos = aString.find_first_of( whitespaceCharacters + "()", startPos );
+
+                std::string tmp = aString.substr( startPos, closingPos - startPos );
+
+
+                if( closingPos != std::string::npos )
+                {
+                    if( tmp.find_first_not_of( "0123456789." ) == std::string::npos ||
+                        ( tmp.size() > 1 && tmp[0] == '-'
+                          && tmp.find_first_not_of( "0123456789.", 1 ) == std::string::npos ) )
+                    {
+                        std::unique_ptr<SEXPR> res;
+
+                        if( tmp.find( '.' ) != std::string::npos )
+                        {
+                            // floating point type. Use only a "C" string to double conversion
+                            char* end = nullptr;
+                            const double fnumb = std::strtod( tmp.c_str(), &end );
+                            if( end == tmp.c_str() || *end != '\0' )
+                                throw PARSE_EXCEPTION( "invalid floating point value" );
+                            res = std::make_unique<SEXPR_DOUBLE>( fnumb, m_lineNumber );
+                        }
+                        else
+                        {
+                            res = std::make_unique<SEXPR_INTEGER>(
+                                    strtoll( tmp.c_str(), nullptr, 0 ), m_lineNumber );
+                        }
+
+                        std::advance( it, closingPos - startPos );
+                        return res;
+                    }
+                    else
+                    {
+                        auto str = std::make_unique<SEXPR_SYMBOL>( tmp, m_lineNumber );
+                        std::advance( it, closingPos - startPos );
+
+                        return str;
+                    }
+                }
+                else
+                {
+                    throw PARSE_EXCEPTION( "format error" );
+                }
+            }
+        }
+
+        return nullptr;
+    }
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'self'; img-src 'self' data:" />
+<title>Schematic-Cicada 启动器</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; height: 100vh; display: flex; background: #14161a; color: #e6e8ee;
+    font: 13px/1.6 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; overflow: hidden;
+  }
+  nav {
+    width: 176px; flex: 0 0 176px; padding: 16px 10px; background: #101216;
+    border-right: 1px solid #23272f; display: flex; flex-direction: column; gap: 2px;
+  }
+  nav .brand { display: flex; align-items: center; gap: 8px; padding: 2px 8px 14px; }
+  nav .brand img { width: 26px; height: 26px; }
+  nav .brand b { font-size: 13.5px; font-weight: 600; letter-spacing: .01em; }
+  nav button {
+    text-align: left; padding: 8px 10px; border: 0; border-radius: 6px; cursor: pointer;
+    background: transparent; color: #aeb6c6; font: inherit;
+  }
+  nav button:hover { background: #1b1f26; color: #dfe4ee; }
+  nav button[aria-current="true"] { background: #22405f; color: #dce9f8; }
+  nav button[disabled] { color: #5c6373; cursor: default; }
+  nav button[disabled]:hover { background: transparent; color: #5c6373; }
+  nav .spacer { flex: 1; }
+  nav .hint { padding: 6px 10px; color: #6f7789; font-size: 11.5px; }
+  main { flex: 1; overflow: auto; padding: 20px 24px 28px; }
+  h2 { margin: 0 0 3px; font-size: 17px; font-weight: 600; }
+  .sub { color: #8c93a3; font-size: 12px; margin-bottom: 16px; }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button.act {
+    padding: 7px 12px; border-radius: 6px; cursor: pointer; font: inherit;
+    border: 1px solid #3a4050; background: #22262e; color: #dfe3ec;
+  }
+  button.act:hover { background: #2a2f39; }
+  button.act.primary { border-color: #3f6ea8; background: #24405f; color: #dce9f8; }
+  button.act.primary:hover { background: #2b4d72; }
+  button.act:disabled { opacity: .45; cursor: default; }
+  button.act.small { padding: 4px 9px; font-size: 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 12px; margin-top: 14px; }
+  .card { border: 1px solid #262a33; border-radius: 8px; background: #191c22; padding: 13px 14px; }
+  .card.sel { border-color: #3f6ea8; background: #1b2634; }
+  .card h3 { margin: 0 0 4px; font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .card .path { color: #7d8598; font-size: 11.5px; word-break: break-all; min-height: 17px; }
+  .card .meta { color: #99a1b3; font-size: 11.5px; margin-top: 6px; }
+  .card .acts { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 10.5px; padding: 1px 7px; border-radius: 999px;
+    border: 1px solid #3a4050; color: #9aa3b5; font-weight: 400;
+  }
+  .tag.ok { border-color: #2f6b46; color: #7fd8a4; }
+  .tag.warn { border-color: #7a6a2f; color: #e8d38a; }
+  .tag.bad { border-color: #7a3a3a; color: #f09a9a; }
+  .empty { border: 1px dashed #2c313b; border-radius: 8px; padding: 20px; color: #838b9d; margin-top: 14px; }
+  pre {
+    margin: 10px 0 0; padding: 10px 12px; max-height: 240px; overflow: auto;
+    background: #101216; border: 1px solid #262a33; border-radius: 6px;
+    font: 11.5px/1.5 "Cascadia Mono", Consolas, monospace; color: #9aa3b5;
+    white-space: pre-wrap; word-break: break-all;
+  }
+  table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 12.5px; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #23272f; }
+  th { color: #8c93a3; font-weight: 500; }
+  td.mono { font-family: "Cascadia Mono", Consolas, monospace; font-size: 11.5px; color: #b9c0d0; }
+  .facts { color: #98a0b2; font-size: 12px; margin: 4px 0 10px; }
+  .facts b { color: #cfd5e2; }
+  .badge {
+    display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px;
+    border: 1px solid #3a4050; color: #a8b0c2; margin-left: 6px; vertical-align: 2px;
+  }
+  .badge[data-phase="ready"] { border-color: #2f6b46; color: #7fd8a4; }
+  .badge[data-phase="failed"] { border-color: #7a3a3a; color: #f09a9a; }
+  .badge[data-phase="starting"] { border-color: #4a5a86; color: #a9bdf0; }
+  .badge[data-phase="blocked"] { border-color: #7a6a2f; color: #e8d38a; }
+  .field { margin: 12px 0; }
+  label { display: block; color: #9aa3b5; font-size: 12px; margin-bottom: 5px; }
+  input[type="text"] {
+    width: 320px; padding: 7px 10px; border-radius: 6px; font: inherit;
+    border: 1px solid #3a4050; background: #101216; color: #e6e8ee;
+  }
+  .msg { margin-top: 10px; font-size: 12.5px; }
+  .sep { color: #8c93a3; font-size: 12px; margin-left: 6px; }
+  label.inline { display: flex; align-items: center; gap: 5px; color: #9aa3b5; font-size: 12px; }
+  pre.console { height: 340px; max-height: none; }
+  .row input[type="text"] { width: 120px; }
+  table.grid { margin-top: 10px; }
+  table.grid tr.clickable:hover { background: #1b1f26; }
+  table.grid tr.clickable { cursor: pointer; }
+  .detail-title { margin: 22px 0 6px; font-size: 14px; font-weight: 600; }
+  details.group { border: 1px solid #262a33; border-radius: 8px; background: #191c22; padding: 9px 12px; margin-top: 8px; }
+  details.group summary { cursor: pointer; color: #cfd5e2; }
+  ul.claims { margin: 8px 0 2px; padding-left: 18px; color: #98a0b2; font-size: 12px; }
+  ul.claims li { margin: 3px 0; }
+  .msg.bad { color: #f09a9a; }
+  .msg.good { color: #7fd8a4; }
+  .msg.note { color: #e8d38a; }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="brand"><img id="mark" alt="" /><b>Schematic-Cicada</b></div>
+    <button data-page="home" aria-current="true">开始</button>
+    <button data-page="projects">项目</button>
+    <button data-page="datasheets">资料库</button>
+    <button data-page="symbols">符号库</button>
+    <button data-page="run">运行</button>
+    <button data-page="settings">设置</button>
+    <div class="spacer"></div>
+    <div class="hint" id="navHint">未启动</div>
+  </nav>
+  <main id="main"></main>
+<script src="./launcher-ui.js"></script>
+</body>
+</html>

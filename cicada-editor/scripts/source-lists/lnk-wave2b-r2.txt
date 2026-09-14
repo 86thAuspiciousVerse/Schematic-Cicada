@@ -1,0 +1,65 @@
+class std::tuple<int,int,int> const & __cdecl GetMajorMinorPatchTuple(void)
+private: static class std::array<struct KIFACE *,8> KIWAY::m_kiface
+private: virtual class EDA_ITEM * __cdecl SCH_COMMIT::makeImage(class EDA_ITEM *)const 
+private: virtual class EDA_ITEM * __cdecl SCH_COMMIT::undoLevelItem(class EDA_ITEM *)const 
+private: virtual void __cdecl PROJECT::elemsClear(void)
+private: virtual void __cdecl PROJECT::setProjectFullName(class wxString const &)
+protected: virtual class std::vector<class KIGFX::VIEW_ITEM *,class std::allocator<class KIGFX::VIEW_ITEM *> > const __cdecl KIGFX::VIEW_GROUP::updateDrawList(void)const 
+protected: virtual void __cdecl COMMIT::makeEntry(class EDA_ITEM *,enum CHANGE_TYPE,class EDA_ITEM *,class BASE_SCREEN *)
+public: __cdecl COMMIT::COMMIT(void)
+public: __cdecl LIBRARY_MANAGER::~LIBRARY_MANAGER(void)
+public: class VECTOR2<int> __cdecl KIFONT::FONT::StringBoundaryLimits(class wxString const &,class VECTOR2<int> const &,int,bool,bool,class KIFONT::METRICS const &)const 
+public: virtual __cdecl COMMIT::~COMMIT(void)
+public: virtual __cdecl LIBRARY_MANAGER_ADAPTER::~LIBRARY_MANAGER_ADAPTER(void)
+public: virtual __cdecl STATUSBAR_WARNING_REPORTER::~STATUSBAR_WARNING_REPORTER(void)
+public: virtual bool __cdecl KIGFX::GAL::SetNativeCursorStyle(enum KICURSOR,bool)
+public: virtual bool __cdecl PROJECT::IsNullProject(void)const 
+public: virtual bool __cdecl PROJECT::TextVarResolver(class wxString *)const 
+public: virtual class BOX2<class VECTOR2<int> > const __cdecl KIGFX::VIEW_GROUP::ViewBBox(void)const 
+public: virtual class COMMIT & __cdecl COMMIT::Stage(class PICKED_ITEMS_LIST const &,enum UNDO_REDO,class BASE_SCREEN *)
+public: virtual class COMMIT & __cdecl SCH_COMMIT::Stage(class EDA_ITEM *,enum CHANGE_TYPE,class BASE_SCREEN *,enum RECURSE_MODE)
+public: virtual class COMMIT & __cdecl SCH_COMMIT::Stage(class std::vector<class EDA_ITEM *,class std::allocator<class EDA_ITEM *> > &,enum CHANGE_TYPE,class BASE_SCREEN *)
+public: virtual class DESIGN_BLOCK_LIBRARY_ADAPTER * __cdecl PROJECT::DesignBlockLibs(void)
+public: virtual class FOOTPRINT_LIBRARY_ADAPTER * __cdecl PROJECT::FootprintLibAdapter(class KIWAY &)
+public: virtual class KIGFX::VIEW_ITEM * __cdecl KIGFX::VIEW_GROUP::GetItem(unsigned int)const 
+public: virtual class PROJECT::_ELEM * __cdecl PROJECT::GetElem(enum PROJECT::ELEM)
+public: virtual class REPORTER & __cdecl STATUSBAR_WARNING_REPORTER::Report(class wxString const &,enum SEVERITY)
+public: virtual class VECTOR2<int> __cdecl KIFONT::STROKE_FONT::GetTextAsGlyphs(class BOX2<class VECTOR2<int> > *,class std::vector<class std::unique_ptr<class KIFONT::GLYPH,struct std::default_delete<class KIFONT::GLYPH> >,class std::allocator<class std::unique_ptr<class KIFONT::GLYPH,struct std::default_delete<class KIFONT::GLYPH> > > > *,class wxString const &,class VECTOR2<int> const &,class VECTOR2<int> const &,class EDA_ANGLE const &,bool,class VECTOR2<int> const &,unsigned int)const 
+public: virtual class std::map<class wxString,class wxString,struct std::less<class wxString>,class std::allocator<struct std::pair<class wxString const ,class wxString> > > & __cdecl PROJECT::GetTextVars(void)const 
+public: virtual class std::vector<int,class std::allocator<int> > __cdecl KIGFX::VIEW_GROUP::ViewGetLayers(void)const 
+public: virtual class wxString __cdecl KIGFX::VIEW_GROUP::GetClass(void)const 
+public: virtual class wxString __cdecl SCH_SHEET::GetItemDescription(class UNITS_PROVIDER *,bool)const 
+public: virtual class wxString const & __cdecl PROJECT::GetRString(enum PROJECT::RSTRING_T)
+public: virtual class wxString const __cdecl PROJECT::AbsolutePath(class wxString const &)const 
+public: virtual class wxString const __cdecl PROJECT::DesignBlockLibTblName(void)const 
+public: virtual class wxString const __cdecl PROJECT::FootprintLibTblName(void)const 
+public: virtual class wxString const __cdecl PROJECT::GetProjectDirectory(void)const 
+public: virtual class wxString const __cdecl PROJECT::GetProjectFullName(void)const 
+public: virtual class wxString const __cdecl PROJECT::GetProjectName(void)const 
+public: virtual class wxString const __cdecl PROJECT::GetProjectPath(void)const 
+public: virtual class wxString const __cdecl PROJECT::GetSheetName(class KIID const &)
+public: virtual class wxString const __cdecl PROJECT::SymbolLibTableName(void)const 
+public: virtual unsigned int __cdecl KIGFX::VIEW_GROUP::GetSize(void)const 
+public: virtual void __cdecl KIGFX::VIEW_GROUP::Add(class KIGFX::VIEW_ITEM *)
+public: virtual void __cdecl KIGFX::VIEW_GROUP::Clear(void)
+public: virtual void __cdecl KIGFX::VIEW_GROUP::Remove(class KIGFX::VIEW_ITEM *)
+public: virtual void __cdecl KIGFX::VIEW_GROUP::ViewDraw(int,class KIGFX::VIEW *)const 
+public: virtual void __cdecl LIB_SYMBOL::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl PROJECT::ApplyTextVars(class std::map<class wxString,class wxString,struct std::less<class wxString>,class std::allocator<struct std::pair<class wxString const ,class wxString> > > const &)
+public: virtual void __cdecl PROJECT::SetElem(enum PROJECT::ELEM,class PROJECT::_ELEM *)
+public: virtual void __cdecl PROJECT::SetRString(enum PROJECT::RSTRING_T,class wxString const &)
+public: virtual void __cdecl SCH_COMMIT::Revert(void)
+public: virtual void __cdecl SCH_FIELD::DoHypertextAction(class EDA_DRAW_FRAME *,class VECTOR2<int> const &)const 
+public: virtual void __cdecl SCH_FIELD::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_JUNCTION::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_LABEL_BASE::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_LINE::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: virtual void __cdecl SCH_SYMBOL::GetMsgPanelInfo(class EDA_DRAW_FRAME *,class std::vector<class MSG_PANEL_ITEM,class std::allocator<class MSG_PANEL_ITEM> > &)
+public: virtual void __cdecl SCH_TEXT::DoHypertextAction(class EDA_DRAW_FRAME *,class VECTOR2<int> const &)const 
+public: virtual void __cdecl SCH_TEXT::Plot(class PLOTTER *,bool,struct SCH_PLOT_OPTS const &,int,int,class VECTOR2<int> const &,bool)
+public: void __cdecl NOTIFICATIONS_MANAGER::Load(void)
+void __cdecl DisplayInfoMessage(class wxWindow *,class wxString const &,class wxString const &)
+void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,class wxAuiPaneInfo &)
+void __cdecl from_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> const &,class wxRect &)
+void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,class wxAuiPaneInfo const &)
+void __cdecl to_json(class nlohmann::json_abi_v3_11_3::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::json_abi_v3_11_3::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> >,void> &,class wxRect const &)
